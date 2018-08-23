@@ -1,4 +1,5 @@
 
+/*
 // REST PARAMETERS "...varNaeme"
 function sendCars(...allCarsdIds) {
     allCarsdIds.forEach(id => console.log(id));
@@ -7,13 +8,13 @@ function sendCars(...allCarsdIds) {
 sendCars(100, 200, 555);
 
 // Rest parameter are treated like array and should be the last variable
-/*
-function sendCars(day, ...allCarsdIds) {
+
+function sendCars2(day, ...allCarsdIds) {
     allCarsdIds.forEach(id => console.log(id));
 }
 
-sendCars('Monday',100, 200, 555);
-*/
+sendCars2('Monday',100, 200, 555);
+
 
 // Destructuring Arrays assign array values to variables
 let carIds = [100, 200, 300];
@@ -37,3 +38,20 @@ let idd, sstyle;
 //{idd, sstyle} = car; // ERROR 
 ({ idd, sstyle } = car);
 console.log("<", idd, sstyle, ">");
+*/
+
+//SPREAD takes an array and break it a part into variables
+
+function startCars(car1, car2, car3) {
+    console.log(car1, car2, car3);
+}
+
+let carIds = [1,2,3];
+startCars(...carIds);
+
+function startCars2(car1, car2, car3, ...rest) {
+    console.log(rest);
+}
+
+let carIds2 = [1,2,3,4,5,6];
+startCars2(...carIds2);
